@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.zhangyingwei:cockroach:1.0.5.01-Beta">
+    <CLASSES>
+      <root url="jar://D:/dev/rep/com/github/zhangyingwei/cockroach/1.0.5.01-Beta/cockroach-1.0.5.01-Beta.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/dev/rep/com/github/zhangyingwei/cockroach/1.0.5.01-Beta/cockroach-1.0.5.01-Beta-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/dev/rep/com/github/zhangyingwei/cockroach/1.0.5.01-Beta/cockroach-1.0.5.01-Beta-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
