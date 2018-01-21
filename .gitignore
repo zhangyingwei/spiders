@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log
+.idea/libraries/Maven__com_github_zhangyingwei_cockroach_1_0_5_02_Beta.xml
+target/
+
+/.idea

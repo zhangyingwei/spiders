@@ -29,7 +29,7 @@ public class MeteosurfcanariasStore implements IStore {
                     }
                 });
             } else {
-                response.select("map").select("area").stream().forEach(element -> {
+                response.select("map").select("area").stream().limit(1).forEach(element -> {
                     String href = element.attr("href");
                     String url = "http://www.meteosurfcanarias.com".concat(href);
                     try {

@@ -17,7 +17,7 @@ import java.io.IOException;
  */
 public class MeteosurfcanariasItemStore implements IStore {
     private String fileName = NameUtils.name(OpentopiaItemStore.class);
-    private File file = new File("src/main/resources/images/meteosurfcanarias/csv/"+fileName+".csv");
+    private File file = new File("/Users/zhangyw/Desktop/images1/meteosurfcanarias/csv/"+fileName+".csv");
     private BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 
     public MeteosurfcanariasItemStore() throws IOException {
@@ -46,7 +46,7 @@ public class MeteosurfcanariasItemStore implements IStore {
         } else if (response.isGroup("meteosurfcanarias.item.page")) {
             byte[] bytes = response.getContentBytes();
             String fileName = FileUtils.getFileNameOrUuid(response).concat(".jpg");
-            FileUtils.save(bytes,"src/main/resources/images/meteosurfcanarias",fileName);
+            FileUtils.save(bytes,"/Users/zhangyw/Desktop/images1/meteosurfcanarias",fileName);
             ItemObject itemObject = (ItemObject) response.getTask().getExtr();
             itemObject.setImgName(fileName);
             String line = itemObject.toCsvLine();
