@@ -1,7 +1,7 @@
 package com.zhangyingwei.spider.cameras.store;
 
-import com.zhangyingwei.cockroach.executer.Task;
 import com.zhangyingwei.cockroach.executer.response.TaskResponse;
+import com.zhangyingwei.cockroach.executer.task.Task;
 import com.zhangyingwei.cockroach.store.IStore;
 
 import java.io.IOException;
@@ -23,7 +23,7 @@ public class MeteosurfcanariasStore implements IStore {
                     String path = element.attr("href");
                     String url = "http://www.meteosurfcanarias.com".concat(path);
                     try {
-                        response.getQueue().push(new Task(url,"meteosurfcanarias.item"));
+                        response.getQueue().push(new Task(url,"meteosurfcanarias.item").nextDeepBy(response.getTask()));
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -33,7 +33,7 @@ public class MeteosurfcanariasStore implements IStore {
                     String href = element.attr("href");
                     String url = "http://www.meteosurfcanarias.com".concat(href);
                     try {
-                        response.getQueue().push(new Task(url, "meteosurfcanarias"));
+                        response.getQueue().push(new Task(url, "meteosurfcanarias").nextDeepBy(response.getTask()));
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

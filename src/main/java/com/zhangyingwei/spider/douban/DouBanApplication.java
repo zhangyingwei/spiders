@@ -5,7 +5,7 @@ import com.zhangyingwei.cockroach.annotation.AutoClose;
 import com.zhangyingwei.cockroach.annotation.EnableAutoConfiguration;
 import com.zhangyingwei.cockroach.annotation.Store;
 import com.zhangyingwei.cockroach.annotation.ThreadConfig;
-import com.zhangyingwei.cockroach.executer.Task;
+import com.zhangyingwei.cockroach.executer.task.Task;
 import com.zhangyingwei.cockroach.queue.CockroachQueue;
 import com.zhangyingwei.cockroach.queue.TaskQueue;
 import com.zhangyingwei.spider.douban.store.DouBanStore;

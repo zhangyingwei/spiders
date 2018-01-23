@@ -1,7 +1,7 @@
 package com.zhangyingwei.spider.weibo.generator;
 
 import com.zhangyingwei.cockroach.common.generators.StringGenerator;
-import com.zhangyingwei.cockroach.executer.Task;
+import com.zhangyingwei.cockroach.executer.task.Task;
 
 /**
  * Created by zhangyw on 2018/1/5.

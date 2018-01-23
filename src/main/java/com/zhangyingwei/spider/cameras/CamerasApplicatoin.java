@@ -5,7 +5,7 @@ import com.zhangyingwei.cockroach.annotation.AutoClose;
 import com.zhangyingwei.cockroach.annotation.EnableAutoConfiguration;
 import com.zhangyingwei.cockroach.annotation.Store;
 import com.zhangyingwei.cockroach.annotation.ThreadConfig;
-import com.zhangyingwei.cockroach.executer.Task;
+import com.zhangyingwei.cockroach.executer.task.Task;
 import com.zhangyingwei.cockroach.queue.CockroachQueue;
 import com.zhangyingwei.cockroach.queue.TaskQueue;
 import com.zhangyingwei.spider.cameras.store.MeteosurfcanariasStore;
@@ -22,7 +22,7 @@ import com.zhangyingwei.spider.douban.store.DouBanStore;
 @AutoClose(false)
 public class CamerasApplicatoin {
     public static void main(String[] args) throws Exception {
-        CockroachQueue queue = TaskQueue.of();
+        CockroachQueue queue = TaskQueue.of().filter(new CamerasTaskFilter());
 //        for (int i = 1; i < 72; i++) {
 //            queue.push(new Task("http://www.opentopia.com/hiddencam.php?showmode=standard&country=%2A&seewhat=highlyrated&p="+i,"opentopia"));
 //        }

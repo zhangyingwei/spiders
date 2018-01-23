@@ -2,7 +2,7 @@ package com.zhangyingwei.spider.weibo;
 
 import com.zhangyingwei.cockroach.CockroachApplication;
 import com.zhangyingwei.cockroach.annotation.*;
-import com.zhangyingwei.cockroach.executer.Task;
+import com.zhangyingwei.cockroach.executer.task.Task;
 import com.zhangyingwei.cockroach.queue.CockroachQueue;
 import com.zhangyingwei.cockroach.queue.TaskQueue;
 import com.zhangyingwei.spider.weibo.generator.WeiBoCookieGeneration;

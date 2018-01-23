@@ -1,8 +1,7 @@
 package com.zhangyingwei.spider.weibo.generator;
 
 import com.zhangyingwei.cockroach.common.generators.MapGenerator;
-import com.zhangyingwei.cockroach.common.generators.StringGenerator;
-import com.zhangyingwei.cockroach.executer.Task;
+import com.zhangyingwei.cockroach.executer.task.Task;
 
 import java.util.HashMap;
 import java.util.Map;

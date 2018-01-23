@@ -1,7 +1,7 @@
 package com.zhangyingwei.spider.cameras.store;
 
-import com.zhangyingwei.cockroach.executer.Task;
 import com.zhangyingwei.cockroach.executer.response.TaskResponse;
+import com.zhangyingwei.cockroach.executer.task.Task;
 import com.zhangyingwei.cockroach.store.IStore;
 import com.zhangyingwei.spider.cameras.ItemObject;
 import org.jsoup.select.Elements;

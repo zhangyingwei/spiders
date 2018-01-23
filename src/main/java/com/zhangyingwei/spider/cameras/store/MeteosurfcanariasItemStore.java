@@ -1,7 +1,7 @@
 package com.zhangyingwei.spider.cameras.store;
 
-import com.zhangyingwei.cockroach.executer.Task;
 import com.zhangyingwei.cockroach.executer.response.TaskResponse;
+import com.zhangyingwei.cockroach.executer.task.Task;
 import com.zhangyingwei.cockroach.store.IStore;
 import com.zhangyingwei.cockroach.utils.FileUtils;
 import com.zhangyingwei.cockroach.utils.NameUtils;
@@ -17,7 +17,7 @@ import java.io.IOException;
  */
 public class MeteosurfcanariasItemStore implements IStore {
     private String fileName = NameUtils.name(OpentopiaItemStore.class);
-    private File file = new File("/Users/zhangyw/Desktop/images1/meteosurfcanarias/csv/"+fileName+".csv");
+    private File file = new File("D://images/meteosurfcanarias/csv/"+fileName+".csv");
     private BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 
     public MeteosurfcanariasItemStore() throws IOException {
@@ -36,6 +36,7 @@ public class MeteosurfcanariasItemStore implements IStore {
                     itemObject.setDesc(desc);
                     Task task = new Task(url, "meteosurfcanarias.item.page");
                     task.setExtr(itemObject);
+                    task.nextDeepBy(response.getTask());
                     try {
                         response.getQueue().push(task);
                     } catch (Exception e) {
@@ -46,7 +47,7 @@ public class MeteosurfcanariasItemStore implements IStore {
         } else if (response.isGroup("meteosurfcanarias.item.page")) {
             byte[] bytes = response.getContentBytes();
             String fileName = FileUtils.getFileNameOrUuid(response).concat(".jpg");
-            FileUtils.save(bytes,"/Users/zhangyw/Desktop/images1/meteosurfcanarias",fileName);
+            FileUtils.save(bytes,"D://images/meteosurfcanarias",fileName);
             ItemObject itemObject = (ItemObject) response.getTask().getExtr();
             itemObject.setImgName(fileName);
             String line = itemObject.toCsvLine();
