@@ -13,7 +13,7 @@ import com.zhangyingwei.spider.github.store.GitHubStore;
 @EnableAutoConfiguration
 @AppName("github spider")
 @Store(GitHubStore.class)
-@ThreadConfig(num = 1, sleep = 1000)
+@ThreadConfig(num = 10, sleep = 1000)
 @AutoClose(false)
 public class GithubApplication {
     public static void main(String[] args) throws Exception {

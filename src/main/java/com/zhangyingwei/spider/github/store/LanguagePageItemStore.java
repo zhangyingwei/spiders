@@ -12,9 +12,11 @@ import org.jsoup.select.Elements;
 public class LanguagePageItemStore implements IStore {
     @Override
     public void store(TaskResponse response) throws Exception {
-        String watch = response.select("#js-repo-pjax-container > div.pagehead.repohead.instapaper_ignore.readability-menu.experiment-repo-nav > div > ul > li:nth-child(2) > form > div.select-menu.js-menu-container.js-select-menu > a.social-count.js-social-count").text();
-        String star = response.select("#js-repo-pjax-container > div.pagehead.repohead.instapaper_ignore.readability-menu.experiment-repo-nav > div > ul > li:nth-child(3) > div > form.unstarred.js-social-form > a").text();
-        String fork = response.select("#js-repo-pjax-container > div.pagehead.repohead.instapaper_ignore.readability-menu.experiment-repo-nav > div > ul > li:nth-child(4) > a.social-count").text();
+
+        Elements actions = response.select(".pagehead-actions");
+        String watch = actions.select("li").get(0).select(".social-count").text();
+        String star = actions.select("li").get(1).select(".social-count").text();
+        String fork = actions.select("li").get(2).select(".social-count").text();
 
         RepItem item = (RepItem) response.getTask().getExtr();
         item.setWatch(watch);
