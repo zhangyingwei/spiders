@@ -2,7 +2,7 @@ package com.zhangyingwei.spider.cameras;
 
 import com.zhangyingwei.cockroach.executer.task.Task;
 import com.zhangyingwei.cockroach.queue.IQueueTaskFilter;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Created by zhangyw on 2018/1/23.
